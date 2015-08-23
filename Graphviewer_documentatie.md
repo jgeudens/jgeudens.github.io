@@ -1,10 +1,11 @@
 ---
 layout: page
-title: GraphViewer
+title: Documentation
 project: graphviewer
-weight: 1
+weight: 3
 ---
 
 <p class="message">
-  GraphViewer page
+  GraphViewer documentation page
 </p>
+

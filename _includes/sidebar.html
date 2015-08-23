@@ -1,36 +1,53 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-			<div class="project-about">    
-				<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope_icon_large.png" />
-				<a class="sidebar-nav-item" href="{{ site.baseurl }}modbusscope">ModbusScope</a>
-			</div>
-		
-			<div class="project-about"> 
-				<img src="{{ site.baseurl }}{{ site.imageurl }}/graphviewer_icon_large.png" />
-				<a class="sidebar-nav-item" href="{{ site.baseurl }}graphviewer">GraphViewer</a>
-			</div>
-
-    </div>
-
+  <div class="container">
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+			
+			<div class="project">
+			
+				<a href="{{ site.baseurl }}">
+					<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope_icon.svg" width="128" alt="ModbusScope icon">
+				</a>
+			
+		    {% comment %}
+		      The code below dynamically generates a sidebar nav of pages with
+		      `layout: page` in the front-matter. See readme for usage.
+		    {% endcomment %}
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
+		    {% assign pages_list = site.pages | sort:"weight"  %}
+		    {% for node in pages_list %}
+		      {% if node.title != null %}
+		        {% if node.layout == "page" %}
+			        {% if node.project == "modbusscope" %}
+			          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+			        {% endif %}
+		        {% endif %}
+		      {% endif %}
+		    {% endfor %}
+			</div>
 
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-	          {% if node.projectpage == null %}
-  	          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-	          {% endif %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+
+			<div class="project">
+				<a href="{{ site.baseurl }}">
+					<img src="{{ site.baseurl }}{{ site.imageurl }}/graphviewer_icon.svg" width="128" alt="Graphviewer icon">
+				</a>
+				
+		    {% comment %}
+		      The code below dynamically generates a sidebar nav of pages with
+		      `layout: page` in the front-matter. See readme for usage.
+		    {% endcomment %}
+
+		    {% assign pages_list = site.pages | sort:"weight"  %}
+		    {% for node in pages_list %}
+		      {% if node.title != null %}
+		        {% if node.layout == "page" %}
+			        {% if node.project == "graphviewer" %}
+			          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+			        {% endif %}
+		        {% endif %}
+		      {% endif %}
+		    {% endfor %}
+		    
+			</div>		
 
     </nav>
   </div>

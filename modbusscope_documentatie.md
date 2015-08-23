@@ -1,11 +1,11 @@
 ---
 layout: page
-title: ModbusScope
+title: Documentation
 project: modbusscope
-weight: 1
+weight: 3
 ---
 
 <p class="message">
-  ModbusScope page
+  ModbusScope documentation page
 </p>
 

@@ -75,17 +75,9 @@ html {
   color: #fff;
 }
 
-/* About section */
-.sidebar-about h1 {
-  color: #fff;
-  margin-top: 0;
-  font-size: 2rem;
-}
-
-/* Project about */
-.project-about {
-  margin-bottom: 2rem;
-  font-size: 2rem;
+/* Project */
+.project {
+  margin-bottom: 4rem;
 }
 
 /* Sidebar nav */
@@ -109,7 +101,6 @@ a.sidebar-nav-item:focus {
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
  * contents to the bottom of the sidebar in tablets and up.
  */
-/*
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
@@ -118,7 +109,7 @@ a.sidebar-nav-item:focus {
     left:   1rem;
   }
 }
-*/
+
 
 /* Container
  *
