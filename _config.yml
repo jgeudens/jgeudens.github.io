@@ -1,5 +1,6 @@
 # Dependencies
-markdown:         redcarpet
+#markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
@@ -10,5 +11,7 @@ relative_permalinks: true
 title:            ModbusScope - GraphViewer
 baseurl:          /
 imageurl:					public/images
-
 paginate:         5
+
+kramdown:
+  input: GFM
