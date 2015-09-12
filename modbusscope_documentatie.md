@@ -17,6 +17,31 @@ The documentation of modbus
 
 # GUI documentation
 
+## Main screen
+
+<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope/modbusscope_main.png" alt="ModbusScope screenshot 1" />
+
+TODO
+
+## Connection settings
+
+<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope/connection_settings.png" alt="Connection settings" />
+
+TODO
+
+## Log settings
+
+<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope/log_settings.png" alt="Log settings" />
+
+TODO
+
+## Register settings
+
+<img src="{{ site.baseurl }}{{ site.imageurl }}/modbusscope/register_settings.png" alt="Register settings" />
+
+TODO
+
+
 # Project file documentation (mbs)
 
 The mbs project file is a file in xml format. It can be edited using any text editor like for example Notepad++. All tags are case sensitive and lower case. The root tag is `modbusscope`. All sections are children of this tag. The `datalevel` attribute specifies the datalevel of the mbs file. Datalevel 2 is compatible with ModbusScope v1.x.x branch.
